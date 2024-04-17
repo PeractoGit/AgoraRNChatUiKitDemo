@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import {
   ChatFragment,
   GlobalContainer as UikitContainer,
@@ -12,11 +12,14 @@ const App = () => {
   const chatType = 0; // 0 means single person chat. 1 means group chat.
 
   return (
-    <UikitContainer
-      option={{appKey: appKey}}
-      ModalComponent={() => <UikitModalPlaceholder />}>
-      <ChatFragment screenParams={{chatId, chatType}} />
-    </UikitContainer>
+    <View>
+      <Text>Welcome to AgoraChatUiKit2.x</Text>
+      <UikitContainer
+        option={{appKey: appKey}}
+        ModalComponent={() => <UikitModalPlaceholder />}>
+        <ChatFragment screenParams={{chatId, chatType}} />
+      </UikitContainer>
+    </View>
   );
 };
 const styles = StyleSheet.create({
